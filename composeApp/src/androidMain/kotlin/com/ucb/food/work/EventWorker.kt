@@ -28,7 +28,7 @@ class EventWorker(
 
         // 2. Replicar en Firebase si hay conexión
         try {
-            val path = "app_events/$timestamp"
+            val path = "session_logs/$timestamp"
             val value = "Event: $eventType at $timestamp"
             firebaseManager.saveData(path, value)
         } catch (e: Exception) {
